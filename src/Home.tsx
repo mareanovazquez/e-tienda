@@ -1,7 +1,10 @@
+import { Hero } from './components/Ui/Hero/Hero';
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <>
+      <Hero />
+    </>
   )
 }
 
