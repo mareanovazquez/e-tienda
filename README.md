@@ -43,6 +43,39 @@ export default defineConfig([
 ])
 ```
 
+## Estructura del Proyecto
+
+```
+e-tienda/
+├── .gitignore
+├── README.md
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+├── public/
+├── src/
+│   ├── App.css
+│   ├── App.tsx
+│   ├── Home.tsx
+│   ├── assets/
+│   │   ├── cart.svg
+│   │   ├── hero.png
+│   │   └── logo.svg
+│   ├── components/
+│   │   ├── Layouts/
+│   │   └── Ui/
+│   ├── index.css
+│   ├── main.tsx
+│   └── pages/
+│       ├── Cart/
+│       └── Home/
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.ts
+```
+
 You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
 ```js
