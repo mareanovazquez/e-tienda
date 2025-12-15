@@ -7,7 +7,7 @@ import { CartModal } from "../CartModal"
 
 export const Navbar = () => {
 
-    const[showCartModal, setShowCartmodal] = useState(false)
+    const [showCartModal, setShowCartmodal] = useState(false)
 
     const handleShowCartModal = () => {
         setShowCartmodal(!showCartModal)
@@ -25,7 +25,7 @@ export const Navbar = () => {
                 <p className={styles.navbarTextAmount}>2</p>
                 <img src={Cart} alt="carrito de compras" onClick={handleShowCartModal} />
             </div>
-            {showCartModal && (<CartModal handleShowCartModal ={handleShowCartModal} />)}
-      </div>
+            {showCartModal && (<CartModal handleShowCartModal={handleShowCartModal} />)}
+        </div>
     )
 }
