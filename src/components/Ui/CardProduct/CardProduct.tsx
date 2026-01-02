@@ -1,23 +1,24 @@
 import styles from "./CardProduct.module.css";
 import { useContext, type FC } from "react";
 import { CartContext } from "../../../context/CartContext";
-import { Product } from "../../../interface";
+import { Product, type CartProduct } from "../../../interface";
 
 interface Props {
-  product: Product[];
+  product: Product;
 }
+
 
 export const CardProduct: FC<Props> = ({ product }) => {
   const { dispatch } = useContext(CartContext);
 
-  const item = {
-    id: product.tail,
+  const item: CartProduct = {
+    id: product.id,
     name: product.name,
     image: product.image,
     quantity: 1,
   }; 
 
-  const addToCart = (item) => {
+  const addToCart = (item:CartProduct) => {
     dispatch({ type: "ADD_TO_CART", payload: item });
   };
   return (
@@ -32,7 +33,7 @@ export const CardProduct: FC<Props> = ({ product }) => {
         <div className={styles.cardBody}>
           <p className={styles.cardType}>{product.type}</p>
           <p className={styles.cardPrice}>
-            price, <small>00</small>
+            ${product.price}, <small>00</small>
           </p>
         </div>
         <button className={styles.cardButton} onClick={() => addToCart(item)}>
